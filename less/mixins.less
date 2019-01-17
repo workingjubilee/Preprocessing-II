@@ -5,7 +5,16 @@
 // STRETCH
 // animated parametric mixin
 
-.ParaFlex(@justify: center) {
+.ParaFlex(@justify:center, @align:center) {
   display: flex;
+  flex-flow: row wrap;
   justify-content: @justify;
+  align-items: @align;
+}
+
+.mobileFlex() {
+  @media @mobile {
+    flex-flow: column nowrap;
+    .ParaFlex
+  }
 }

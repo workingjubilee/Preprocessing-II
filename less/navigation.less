@@ -7,16 +7,40 @@
 // }
 
 nav {
-  .ParaFlex(space-between);
+  border-bottom: 2px dashed @navigation-border;
+  .container {
+    padding: 15px 0;
+    .ParaFlex(space-between);
 
-  .navBlock {
-    min-width: 50%;
-    .ParaFlex(space-around);
-  }
+    @media @mobile {
+      padding-bottom: 0px;
+    }
 
-  a {
-    font-size: 1.6rem;
-    text-decoration: none;
-    color: black;
+    .navHead {
+      padding: 5px;
+      padding-left: 0px;
+      @media @mobile {
+        .ParaFlex;
+        min-width: 100%;
+      }
+    }
+
+
+    .navBlock {
+      padding: 15px;
+      min-width: 45%;
+      .ParaFlex(space-around);
+
+      @media @mobile {
+        // padding-bottom: 0px;
+        min-width: 100%;
+      }
+    }
+
+    a {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: black;
+    }
   }
 }
