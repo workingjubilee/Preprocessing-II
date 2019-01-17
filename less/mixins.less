@@ -12,9 +12,21 @@
   align-items: @align;
 }
 
-.mobileFlex() {
+.mobileFlex(@column:column) {
   @media @mobile {
-    flex-flow: column nowrap;
-    .ParaFlex
+    .ParaFlex;
+    flex-flow: @column nowrap;
   }
 }
+
+.buttonMix(@text-fg,@button-bg,@fatness,@corner) {
+  text-align: center;
+  color: @text-fg;
+  font-size: @fatness;
+  padding: @fatness;
+  background-color: @button-bg;
+  border-radius: @corner;
+}
+
+// parametric button mixin? {
+// }
