@@ -1,1 +1,39 @@
 // Mixins in here
+// REQUIREMENTS
+// Buttons go here, must be parametric mixins
+
+// STRETCH
+// animated parametric mixin
+
+.ParaFlex(@justify:center, @align:center) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.mobileFlex(@column:column) {
+  @media @mobile {
+    .ParaFlex(center,center);
+    flex-flow: @column nowrap;
+  }
+}
+
+.mobilePadding(@leftpadding:3%,@rightpadding:3%) {
+  @media @mobile {
+    padding-left: @leftpadding;
+    padding-right: @rightpadding;
+  }
+}
+
+.buttonMix(@text-fg,@button-bg,@fatness,@corner) {
+  text-align: center;
+  color: @text-fg;
+  font-size: @fatness;
+  padding: @fatness;
+  background-color: @button-bg;
+  border-radius: @corner;
+}
+
+// parametric button mixin? {
+// }

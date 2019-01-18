@@ -1,1 +1,46 @@
 // Navigation Styles here
+
+// INDIE FLOWER on "Fun Bus" heading, all other text is Roboto.
+// So probably one of:
+// h1, h2, h3, h4, h5 {
+//   font-family: 'Indie Flower', cursive;
+// }
+
+nav {
+  border-bottom: 2px dashed @navigation-border;
+  .container {
+    padding: 15px 0;
+    .ParaFlex(space-between);
+
+    @media @mobile {
+      padding-bottom: 0px;
+    }
+
+    .navHead {
+      padding: 5px;
+      padding-left: 0px;
+      @media @mobile {
+        .ParaFlex;
+        min-width: 100%;
+      }
+    }
+
+
+    .navBlock {
+      padding: 15px;
+      min-width: 45%;
+      .ParaFlex(space-around);
+
+      @media @mobile {
+        // padding-bottom: 0px;
+        min-width: 100%;
+      }
+    }
+
+    a {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

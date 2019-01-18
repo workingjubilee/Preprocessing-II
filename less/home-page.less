@@ -1,3 +1,21 @@
+// REQUIREMENTS
+// All header styling must use home-page.less
+
+// STRETCH
+// Introduce a form with inputs allowing users to select a vacation package and a submit button at the bottom of the page. Introduce inputs for name, email, phone number, and an area for them to leave special instructions.
+
+header {
+  h2 {
+    margin-top: 15px;
+  }
+  padding-bottom: 10px;
+  border-bottom: 2px dashed @navigation-border;
+  img {
+    .ParaFlex;
+  }
+  .mobilePadding;
+}
+
 .home {
 
   .content-section {
@@ -6,19 +24,30 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+      .mobilePadding;
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      .mobilePadding;
+      @media @mobile {
+        width: 100%;
+        object-fit: stretch;
+      }
 
       img {
         border-radius: 10px;
+        width: 100%;
       }
     }
   }
@@ -26,36 +55,60 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    .mobileFlex(column-reverse);
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      .mobilePadding;
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      .mobilePadding;
+      img {
+        width: 100%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 100%;
+    }
+    .mobilePadding;
+    }
 
     img {
       border-radius: 10px;
     }
-  }
 
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+
+    @media @mobile {
+      justify-content: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 75%;
+      }
+    }
+    .btn{
+      .buttonMix(white,#008080,16px,15px);
+      @media @mobile {
+        .buttonMix(white,@button-bg,16px,15px);
+      }
     }
   }
 }// home
